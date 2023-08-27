@@ -1,0 +1,122 @@
+
+    .nav {
+        background-color: purple;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nick {
+        float: right;
+        margin: 0;
+        
+    }
+.ban{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.same{
+    border-radius: 8px;
+}
+.sign{
+    background-color: purple;
+    color: white;
+}
+
+.ker{
+    height: 80px;
+    width: 500px;
+    border-radius:6px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+form label, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.oro{
+    float: left;
+}
+
+.blog-container {
+    width: 300px; /* Set the desired width */
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+/* Style the image to fill the container */
+.blog-image {
+    width: 100%; /* Make the image width 100% of the container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any extra spacing */
+}
+
+
+.blog-post {
+    width: 300px; /* Set the desired width */
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    padding: 10px; /* Add padding for spacing */
+    margin: 10px; /* Add margin for spacing between posts */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+/* Style for the blog post heading */
+.blog-heading {
+    font-size: 18px; /* Set the desired font size */
+    font-weight: bold; /* Make the heading bold */
+}
+
+/* Style for the blog post content */
+.blog-content {
+    margin-top: 10px; /* Add margin for spacing below the heading */
+    font-size: 14px; /* Set the desired font size */
+}
+
+/* Style for the blog post image */
+.blog-image {
+    width: 100%; /* Make the image width 100% of the container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any extra spacing */
+    margin-top: 10px; /* Add margin for spacing below the content */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+<body>
+  
+   
+        <div class="nav">Personal blog App 
+            <p class="nick">Login</p>
+        </div>
+        <div class="key">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="ban">
+        <form action="#">
+            <input class="same" id="name" type="text" name="username" placeholder="first name" />
+            <br />
+            <br />
+            <input class="same" id="names" type="text" name="contact" placeholder="last name" />
+            <br />
+            <br />
+            <input class="same" id="email" type="text" name="Email" placeholder="Email" />
+            <br />
+            <br />
+            <input class="same" id="password" type="text" name="password" placeholder="Password" />
+            <br>
+            <br>
+            <input class="same" id="passwords" type="text" name="password" placeholder=" repeat Password" />
+
+          </form>
+          <br />
+          <br />
+      
+      
+       
+      
+          <button class="sign" id="signupButton" onclick="signup()">Sign Up</button>
+
+          
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+        <script src="./firebase-config.js"></script>
+        <script>
+            function signup() {
+                // Redirect to the login page (you can change the URL)
+                window.location.href = 'login.html';
+            }
+        </script>
+
+ <script src="./index.js"></script>
+</body>
+</html>
