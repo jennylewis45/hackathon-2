@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Update</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+<script src="./firebase-config.js"></script>
+  <script>
+        // var firebaseConfig = {
+        //     apiKey: "YOUR_API_KEY",
+        //     authDomain: "YOUR_AUTH_DOMAIN",
+        //     projectId: "YOUR_PROJECT_ID",
+        //     storageBucket: "YOUR_STORAGE_BUCKET",
+        //     messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        //     appId: "YOUR_APP_ID"
+        // };
+
+        // firebase.initializeApp(firebaseConfig); 
+
+        function updatePassword() {
+            var oldPassword = document.getElementById("name").value;
+            var newPassword = document.getElementById("names").value;
+            var repeatPassword = document.getElementById("email").value;
+
+            if (newPassword !== repeatPassword) {
+                alert("New Passwords do not match!");
+                return;
+            }
+
+            var user = firebase.auth().currentUser;
+
+            var credential = firebase.auth.EmailAuthProvider.credential(
+                user.email,
+                oldPassword
+            );
+
+            // Reauthenticate user
+            user.reauthenticateWithCredential(credential)
+                .then(function () {
+                    // Password reauthentication successful, update password
+                    user.updatePassword(newPassword)
+                        .then(function () {
+                            console.log("Password updated successfully");
+                            alert("Password updated successfully");
+                        })
+                        .catch(function (error) {
+                            console.error("Password update error: " + error.message);
+                        });
+                })
+                .catch(function (error) {
+                    console.error("Reauthentication error: " + error.message);
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img class="image" src="profile 3.png" alt="">
+            <h1>Inzamam Malik <br> <br>Password</h1>
+            <form>
+                <input class="same" id="name" type="password" name="oldPassword" placeholder="Old Password" />
+                <br />
+                <br />
+                <input class="same" id="names" type="password" name="newPassword" placeholder="New Password" />
+                <br />
+                <br />
+                <input class="same" id="email" type="password" name="repeatPassword" placeholder="Repeat Password" />
+                <br><br>
+                <button class="sign" type="button" onclick="updatePassword()">Update Password</button>
+            </form>
+            <br />
+            <br />
+        </div>
+    </div>
+    <button onclick="redirectssLogin()" class="sign">Next</button>
+    <script>
+        function redirectssLogin() {
+            // Redirect to the login page (you can change the URL)
+            window.location.href = 'allblogs.html';
+        }
+        </script>
+</body>
+</html>

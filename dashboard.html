@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+  
 </head>
 <body>
     <div class="nav">Personal blog App 
@@ -21,22 +22,72 @@
             <input class="ker"  id="names" type="text" name="contact" placeholder="what's in your mind" />
             <br />
             <br />
-            <button class="sign">Publish Blog</button>
+            <button class="sign" type="submit">Post Blog</button>
 
             <h1 class="oro">My Blogs</h1>
- <!-- <div class="para"> 
- <img src="profile 3.png" alt=""> <h1>An Action Button Could Be Coming to the iPhone 15</h1>
+<div class="container">
+<div class="blog-post">
+    <h2 class="blog-heading">An action button could be coming to the iphone 15</h2>
 <p>Apple could be putting an Action button on your next iPhone. According to a July report from MacRumors, code in the fourth iOS 17 developer beta hints at functionality for an Action button on the next-gen iPhone 15 Pro and Pro Max models.
     Apple introduced the Action button on the Apple Watch Ultra. It's a physical button on the side of the Apple Watch Ultra that allows you to run a preselected function or program when you press it without unlocking your device or navigating to an app. Some of the preselected functions include starting a stopwatch, 
     beginning a workout and turning on your flashlight.</p>
-</div> -->
-<div class="blog-post">
-    <h2 class="blog-heading">Blog Post Title</h2>
-    <p class="blog-content">
-        This is the content of the blog post. You can add your blog content here.
-    </p>
     <img class="blog-image" src="profile 3.png" alt="Blog Image">
+ <button class="sign">Delete</button>
+ <button class="sign">Edit</button>
+
 </div>
+<div class="blog-post">
+    <h2 class="blog-heading">An action button could be coming to the iphone 15</h2>
+<p>Apple could be putting an Action button on your next iPhone. According to a July report from MacRumors, code in the fourth iOS 17 developer beta hints at functionality for an Action button on the next-gen iPhone 15 Pro and Pro Max models.
+    Apple introduced the Action button on the Apple Watch Ultra. It's a physical button on the side of the Apple Watch Ultra that allows you to run a preselected function or program when you press it without unlocking your device or navigating to an app. Some of the preselected functions include starting a stopwatch, 
+    beginning a workout and turning on your flashlight.</p>
+    <img class="blog-image" src="profile 3.png" alt="Blog Image">
+    <button class="sign">Delete</button>
+ <button class="sign">Edit</button>
+</div>
+</div>
+
+<header>
+    <h1>Welcome, <span id="fullName">John Doe</span></h1>
+    <button id="logoutButton">Log Out</button>
+</header>
+
+<main>
+    <section>
+        <h2>Post a Blog</h2>
+        <form id="blogForm">
+            <label for="title">Blog Title (5-50 characters):</label>
+            <input type="text" id="title" name="title" minlength="5" maxlength="50" required><br><br>
+
+            <label for="body">Blog Body (100-3000 characters):</label>
+            <textarea id="body" name="body" minlength="100" maxlength="3000" required></textarea><br><br>
+
+            <button type="submit">Post Blog</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Your Blogs</h2>
+        <div id="blogList"></div>
+    </section>
+</main>
+<button onclick="redirectsLogin()" class="sign">Next</button>
+<script>
+    function redirectsLogin() {
+        // Redirect to the login page (you can change the URL)
+        window.location.href = 'profile.html';
+    }
+</script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+<script src="./firebase-config.js"></script>
+
+
+<script src="app.js"></script>
+</body>
+</html>
+    <!-- <script src="./dashboard.js"></script> -->
     <script src="./index.js"></script>
 </body>
 </html>
